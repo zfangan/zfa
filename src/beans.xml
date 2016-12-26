@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns="http://www.springframework.org/schema/beans"
+   xsi:schemaLocation=
+   "http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+ <bean id="kitchener" class="kitcheners.imp1.KitchenerImp1">
+ <property name="name">
+           <value>张三</value>
+           </property>
+ <property name="specialty">
+           <value>水煮鱼</value>
+           </property>
+  </bean>
+ 
+ <bean id="customer" class="customers.imp1.CustomerImp1">
+ <property name="name">
+        <value>李四</value>
+        </property>
+ <property name="kitchener">
+ <ref bean="kitchener"/>
+ </property>
+ </bean>
+ </beans>
